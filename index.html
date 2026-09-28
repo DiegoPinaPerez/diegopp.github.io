@@ -1,0 +1,191 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Personal portfolio of Diego Pina Perez — mechanical engineering enthusiast and outdoor adventurer."> <title>Diego Pina Perez | Engineering & Adventure</title> <style> :root { --navy: #071a2b; --blue: #0d6efd; --cyan: #29d3d3; --white: #f8fafc; --muted: #a8b6c5; --card: rgba(255,255,255,0.07); --border: rgba(255,255,255,0.12); } * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { font-family: Arial, Helvetica, sans-serif; background: var(--navy); color: var(--white); line-height: 1.6; } /* Navigation */ nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 18px 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(7, 26, 43, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); } .logo { font-size: 1.15rem; font-weight: 700; letter-spacing: 1px; } .logo span { color: var(--cyan); } nav ul { list-style: none; display: flex; gap: 30px; } nav a { color: var(--white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; } nav a:hover { color: var(--cyan); } /* Hero */ .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 7% 80px; position: relative; overflow: hidden; background: radial-gradient(circle at 80% 30%, rgba(41,211,211,0.16), transparent 30%), radial-gradient(circle at 20% 80%, rgba(13,110,253,0.15), transparent 35%); } .hero::after { content: ""; position: absolute; width: 500px; height: 500px; right: -180px; bottom: -220px; border-radius: 50%; background: rgba(41,211,211,0.08); filter: blur(20px); } .hero-content { max-width: 850px; position: relative; z-index: 2; } .eyebrow { color: var(--cyan); text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; } h1 { font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: 0.95; letter-spacing: -5px; margin-bottom: 30px; } h1 span { color: transparent; -webkit-text-stroke: 1px var(--cyan); } .hero p { max-width: 650px; color: var(--muted); font-size: 1.2rem; margin-bottom: 35px; } .buttons { display: flex; gap: 15px; flex-wrap: wrap; } .button { display: inline-block; padding: 13px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: transform 0.3s, background 0.3s; } .button-primary { background: var(--cyan); color: var(--navy); } .button-secondary { border: 1px solid var(--border); color: var(--white); } .button:hover { transform: translateY(-3px); } /* General sections */ section { padding: 100px 7%; } .section-label { color: var(--cyan); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; margin-bottom: 10px; } .section-title { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 50px; } /* About */ .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; } .about-text { color: var(--muted); font-size: 1.08rem; } .about-text p + p { margin-top: 20px; } .quote { border-left: 3px solid var(--cyan); padding: 25px; background: var(--card); border-radius: 0 15px 15px 0; font-size: 1.5rem; font-weight: 600; } /* Interests */ .interests { background: #061522; } .interest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; } .interest-card { min-height: 280px; padding: 30px; border: 1px solid var(--border); border-radius: 20px; background: linear-gradient( 145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02) ); display: flex; flex-direction: column; justify-content: flex-end; transition: transform 0.35s, border-color 0.35s; } .interest-card:hover { transform: translateY(-8px); border-color: var(--cyan); } .icon { font-size: 3rem; margin-bottom: auto; } .interest-card h3 { font-size: 1.35rem; margin-bottom: 8px; } .interest-card p { color: var(--muted); font-size: 0.9rem; } /* Engineering */ .engineering { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; } .engineering-copy p { color: var(--muted); margin-bottom: 20px; font-size: 1.05rem; } .skills { display: grid; gap: 18px; } .skill { padding: 22px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); } .skill strong { display: block; margin-bottom: 5px; } .skill span { color: var(--muted); font-size: 0.9rem; } /* Adventure */ .adventure { text-align: center; background: linear-gradient(rgba(7,26,43,0.7), rgba(7,26,43,0.95)), linear-gradient(135deg, #075985, #0f172a); } .adventure-content { max-width: 750px; margin: auto; } .adventure-content p { color: var(--muted); font-size: 1.1rem; margin-bottom: 30px; } /* Footer */ footer { padding: 35px 7%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; color: var(--muted); font-size: 0.85rem; } /* Responsive */ @media (max-width: 900px) { .interest-grid { grid-template-columns: repeat(2, 1fr); } .about-grid, .engineering { grid-template-columns: 1fr; } } @media (max-width: 600px) { nav ul { display: none; } h1 { letter-spacing: -2px; } .interest-grid { grid-template-columns: 1fr; } section { padding: 75px 6%; } .hero { padding-left: 6%; padding-right: 6%; } } </style> </head> <body> <nav> <div class="logo">DIEGO<span>.</span></div>
+<ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#interests">Interests</a></li>
+  <li><a href="#engineering">Engineering</a></li>
+  <li><a href="#adventure">Adventure</a></li>
+</ul>
+
+</nav> <main>
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Mechanical Engineering × Adventure</div>
+
+    <h1>
+      Diego<br>
+      <span>Pina Perez</span>
+    </h1>
+
+    <p>
+      Curious about how things work, passionate about mechanical engineering,
+      and always looking for the next place to explore.
+    </p>
+
+    <div class="buttons">
+      <a href="#interests" class="button button-primary">
+        Explore My Interests
+      </a>
+
+      <a href="#about" class="button button-secondary">
+        About Me
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+
+    <div>
+      <div class="section-label">01 / About</div>
+
+      <h2 class="section-title">
+        Building things.<br>
+        Exploring places.
+      </h2>
+
+      <div class="about-text">
+        <p>
+          I'm Diego Pina Perez, someone who enjoys combining technical
+          curiosity with a love for the outdoors.
+        </p>
+
+        <p>
+          Mechanical engineering fascinates me because it brings together
+          physics, creativity, problem-solving, and the challenge of
+          turning an idea into something real.
+        </p>
+
+        <p>
+          Outside of engineering, you'll usually find me on the water,
+          on a trail, or looking for my next adventure.
+        </p>
+      </div>
+    </div>
+
+    <div class="quote">
+      "Stay curious. Build boldly. Explore further."
+    </div>
+
+  </div>
+</section>
+
+<section id="interests" class="interests">
+  <div class="section-label">02 / Interests</div>
+
+  <h2 class="section-title">What keeps me moving</h2>
+
+  <div class="interest-grid">
+
+    <article class="interest-card">
+      <div class="icon">⚙️</div>
+      <h3>Mechanical Engineering</h3>
+      <p>
+        Designing, understanding, and improving the machines and systems
+        that shape the world around us.
+      </p>
+    </article>
+
+    <article class="interest-card">
+      <div class="icon">🏄</div>
+      <h3>Paddle Boarding</h3>
+      <p>
+        Getting out on the water, finding balance, and enjoying a different
+        perspective from the shore.
+      </p>
+    </article>
+
+    <article class="interest-card">
+      <div class="icon">🥾</div>
+      <h3>Hiking</h3>
+      <p>
+        Exploring trails, challenging myself, and discovering new places
+        one step at a time.
+      </p>
+    </article>
+
+    <article class="interest-card">
+      <div class="icon">🌊</div>
+      <h3>Cliff Diving</h3>
+      <p>
+        Adventure, adrenaline, and the experience of taking the leap —
+        with safety and preparation always coming first.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section id="engineering">
+  <div class="engineering">
+
+    <div class="engineering-copy">
+      <div class="section-label">03 / Engineering</div>
+
+      <h2 class="section-title">
+        Engineering is<br>
+        curiosity in action.
+      </h2>
+
+      <p>
+        I'm interested in the way mechanical systems work — from individual
+        components to complex machines.
+      </p>
+
+      <p>
+        I enjoy the combination of analytical thinking and creativity that
+        engineering demands: understand the problem, design a solution,
+        test it, and make it better.
+      </p>
+    </div>
+
+    <div class="skills">
+
+      <div class="skill">
+        <strong>Problem Solving</strong>
+        <span>Breaking complex problems into manageable pieces.</span>
+      </div>
+
+      <div class="skill">
+        <strong>Design &amp; Creativity</strong>
+        <span>Turning ideas into practical mechanical solutions.</span>
+      </div>
+
+      <div class="skill">
+        <strong>Curiosity</strong>
+        <span>Always asking how things work — and how they could work better.</span>
+      </div>
+
+      <div class="skill">
+        <strong>Hands-On Thinking</strong>
+        <span>Connecting theory with real-world systems and physical objects.</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="adventure" class="adventure">
+  <div class="adventure-content">
+
+    <div class="section-label">04 / Adventure</div>
+
+    <h2 class="section-title">
+      Outside the classroom,<br>
+      the world is the playground.
+    </h2>
+
+    <p>
+      From paddle boarding and hiking to the rush of cliff diving,
+      adventure is a big part of how I spend my time away from engineering.
+    </p>
+
+    <a href="#about" class="button button-primary">
+      Keep Exploring
+    </a>
+
+  </div>
+</section>
+
+</main> <footer> <span>© 2026 Diego Pina Perez</span> <span>Designed around engineering &amp; adventure.</span> </footer> </body> </html>
